@@ -1,0 +1,70 @@
+name: "分享经验"
+description: "分享一条有适用条件的真实生活经验"
+title: "[经验] "
+body:
+  - type: markdown
+    attributes:
+      value: "Issue 会立即公开。请勿填写手机号、详细地址、证件、内部资料或他人隐私。GitHub 昵称不是匿名投稿。"
+  - type: dropdown
+    id: category
+    attributes:
+      label: "栏目"
+      description: "选择最贴近的栏目。"
+      options:
+        - "01-纯过日子"
+        - "02-不烧心清单"
+        - "03-早知道就好了"
+        - "04-纯过日子100条"
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: "你的经验"
+      description: "发生了什么？亲历请写大致时间；整理他人经验请注明来源。"
+    validations:
+      required: true
+  - type: textarea
+    id: conditions
+    attributes:
+      label: "适用条件"
+      description: "生活条件、预算与地区可概括，不要填写精确地址。"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "具体做法"
+      description: "后来的人可以怎样做？"
+    validations:
+      required: true
+  - type: textarea
+    id: exceptions
+    attributes:
+      label: "例外与不适用情况"
+      description: "哪些条件下可能没有用，或反而更麻烦？"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: "依据与验证"
+      description: "来源链接和查询日期，或脱敏实测说明；没有外部依据请明确写出。"
+    validations:
+      required: true
+  - type: textarea
+    id: credit
+    attributes:
+      label: "署名偏好"
+      description: "默认使用公开 GitHub 昵称；也可要求正文不单独署名，账号和历史仍公开。"
+    validations:
+      required: false
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: "投稿确认"
+      options:
+        - label: "我已脱敏，未包含广告或虚构经历。"
+          required: true
+        - label: "我有权提交这些内容，原创文档贡献同意按 CC BY-SA 4.0 发布；第三方材料已注明来源与授权。"
+          required: true

@@ -1,0 +1,35 @@
+name: "纠错建议"
+description: "纠正错误、补充条件或反馈过时信息"
+title: "[纠错] "
+body:
+  - type: markdown
+    attributes:
+      value: "Issue 会立即公开。请勿填写手机号、详细地址、证件、内部资料或他人隐私。GitHub 昵称不是匿名投稿。"
+  - type: textarea
+    id: location
+    attributes:
+      label: "对应文件或条目"
+      description: "请提供文件链接和条目标题。"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: "问题与适用条件"
+      description: "哪里不准确？是否与地区、时间、预算有关？"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "修改建议与依据"
+      description: "提供建议措辞、来源和查询日期，或真实尝试结果。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: "提交确认"
+      options:
+        - label: "我已脱敏；如建议文字纳入正文，我有权授权并同意原创文档贡献按 CC BY-SA 4.0 发布。"
+          required: true
